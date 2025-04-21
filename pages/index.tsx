@@ -1,4 +1,4 @@
-// pages/index.tsx – Shinji 출현 복원 흐름
+// pages/index.tsx
 
 import { useState } from 'react';
 import { supabase } from '../utils/supabase';
@@ -19,8 +19,15 @@ export default function Home() {
   };
 
   const checkSubscription = async (user: any) => {
-    const { data } = await supabase.from('profiles').select('subscriptionActive').eq('id', user.id).single();
-    if (data?.subscriptionActive) setSubscribed(true);
+    const { data } = await supabase
+      .from('profiles')
+      .select('subscriptionActive')
+      .eq('id', user.id)
+      .single();
+
+    if (data?.subscriptionActive) {
+      setSubscribed(true);
+    }
   };
 
   const handleSubscribe = () => {
