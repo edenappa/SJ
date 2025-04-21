@@ -1,5 +1,5 @@
 {
-  "name": "shinji-typesafe",
+  "name": "shinji-final",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
@@ -20,4 +20,3 @@
     "@types/stripe": "^8.0.0"
   }
 }
- 

@@ -1,5 +1,3 @@
-// lib/stripe.ts
-
 export const initiateStripeCheckout = async (email: string) => {
   const res = await fetch('/api/checkout', {
     method: 'POST',

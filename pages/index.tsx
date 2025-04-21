@@ -1,5 +1,3 @@
-// pages/index.tsx
-
 import { useState } from 'react';
 import { supabase } from '@/utils/supabase';
 import { initiateStripeCheckout } from '@/lib/stripe';
@@ -19,15 +17,8 @@ export default function Home() {
   };
 
   const checkSubscription = async (user: any) => {
-    const { data } = await supabase
-      .from('profiles')
-      .select('subscriptionActive')
-      .eq('id', user.id)
-      .single();
-
-    if (data?.subscriptionActive) {
-      setSubscribed(true);
-    }
+    const { data } = await supabase.from('profiles').select('subscriptionActive').eq('id', user.id).single();
+    if (data?.subscriptionActive) setSubscribed(true);
   };
 
   const handleSubscribe = () => {
@@ -64,5 +55,3 @@ export default function Home() {
     </main>
   );
 }
-
-// Trigger Vercel rebuild
