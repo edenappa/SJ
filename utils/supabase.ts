@@ -1,6 +1,4 @@
-// utils/supabase.ts
-
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from '@/utils/supabase';
 
 export const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
