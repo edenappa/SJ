@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { supabase } from '@/utils/supabase';
-import { initiateStripeCheckout } from '../lib/stripe';
+import { initiateStripeCheckout } from '@/lib/stripe';
 
 export default function Home() {
   const [email, setEmail] = useState('');
