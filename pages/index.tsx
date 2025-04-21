@@ -1,7 +1,7 @@
 // pages/index.tsx
 
 import { useState } from 'react';
-import { supabase } from '../utils/supabase';
+import { supabase } from '@/utils/supabase';
 import { initiateStripeCheckout } from '../lib/stripe';
 
 export default function Home() {
